@@ -132,14 +132,20 @@ document.querySelector("#text").addEventListener("dblclick", function (e) {
     if (e.target.matches(".rename")) {
       text = rename.value;
       target.textContent = numEl + "  - " + text;
-      rename.value = "";
+
       for (i = 0; i != data.length; i++) {
         if (numEl == data[i].count) {
           console.log(data[i]);
           data[i].text = text;
           localStorage.setItem("items", JSON.stringify(data));
+          overlay__name.style.display = "none";
+          rename.value = "";
         }
       }
+    }
+    if (e.target.matches(".abolition")) {
+      overlay__name.style.display = "none";
+      rename.value = "";
     }
   });
 });
