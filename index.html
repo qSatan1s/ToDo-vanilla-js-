@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&family=Caveat+Brush&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>ToDo</title>
+  </head>
+  <body>
+    <div class="main__window">
+      <div class="main__title">Домашнии дела</div>
+      <div class="container">
+        <a class="pan qwe" title="Добавить запись">
+          <img class="pan" id="pan" src="img/pen.png" alt="" />
+          <img class="add__note" src="img/add.png" alt="" />
+        </a>
+        <a class="eraser" title="Удалить запись">
+          <img class="eraser" src="img/lastik.png" alt="" />
+          <img class="remove" src="img/remove.png" alt="" />
+        </a>
+
+        <div class="incremental__action" id="incremental__action">
+          <div class="text" id="text"></div>
+        </div>
+
+        <div class="overlay" id="overlay">
+          <div class="preloader">
+            <div class="overlay__do">
+              <div class="form__group field">
+                <input
+                  type="input"
+                  class="form__field"
+                  placeholder="В планах"
+                  name="name"
+                  id="name"
+                  required
+                />
+                <label for="name" id="plan" class="form__label">В планах</label>
+              </div>
+              <a href="#" class="save__record add">Изменить </a>
+              <a href="#" class="save__record abolition">Отмена </a>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+        <div class="overlay__name" id="overlay__name">
+          <div class="preloader">
+            <div class="overlay__do">
+              <div class="form__group field">
+                <input
+                  type="input"
+                  class="form__field"
+                  placeholder="В планах"
+                  name="name"
+                  id="renameq"
+                  required
+                />
+                <label for="rename" id="rename" class="form__label">Новое имя</label>
+              </div>
+              <a href="#" class="save__record rename">Изменить </a>
+              <a href="#" class="save__record abolition">Отмена </a>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </body>
+  <script src="main.js"></script>
+</html>

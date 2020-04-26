@@ -1,0 +1,239 @@
+body {
+    font-family: "Caveat Brush", cursive;
+}
+
+.overlay {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+
+.overlay__name {
+    display: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.preloader:after {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 250px;
+    width: 400px;
+    margin: auto;
+    background: white;
+    border-radius: 6px;
+    z-index: 101;
+    margin-left: 35%;
+}
+
+.main__window {
+    position: absolute;
+    height: 78%;
+    width: 600px;
+    margin-left: 28%;
+    margin-top: 3%;
+    outline: 5px solid #000;
+    background-image: url("img/main__phone.jpg");
+}
+
+.main__title {
+    color: white;
+    text-align: center;
+    font-size: 4em;
+}
+
+.container {
+    background-image: url("img/phone.jpg");
+    width: 520px;
+    margin-left: 7%;
+    margin-top: 10%;
+    height: 90%;
+
+    font-family: "Caveat", cursive;
+}
+
+.pan {
+    cursor: pointer;
+    position: absolute;
+    margin-left: 95%;
+    height: 600px;
+}
+
+.add__note {
+    position: absolute;
+    top: 100%;
+    height: 20%;
+}
+
+#rename {
+    position: absolute;
+    margin-top: -60%;
+    padding-left: 25%;
+    font-size: 2em;
+}
+
+.eraser {
+    cursor: pointer;
+    position: absolute;
+    height: 300px;
+    margin-top: 100px;
+    margin-left: -110px;
+}
+
+.remove {
+    position: absolute;
+    top: 170%;
+    height: 35%;
+    margin-left: -75px;
+}
+
+.overlay__do {
+    position: absolute;
+    margin-left: 44%;
+    margin-top: 35%;
+    z-index: 200;
+}
+
+#plan {
+    position: absolute;
+    margin-top: -50%;
+    padding-left: 25%;
+    font-size: 2em;
+}
+
+
+
+.form__group {
+    padding: 10px 0 20px;
+    text-align: center;
+    margin-top: -90px;
+    margin-left: -15%;
+    width: 200px;
+}
+
+.form__field {
+    text-align: center;
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    font-size: 1.3rem;
+    color: rgb(7, 7, 7);
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+    color: transparent;
+}
+
+.form__field:placeholder-shown~.form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #9b9b9b;
+}
+
+.form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image-slice: 1;
+}
+
+.form__field:focus~.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #11998e;
+    font-weight: 700;
+}
+
+/* reset input */
+.form__field:required,
+.form__field:invalid {
+    box-shadow: none;
+}
+
+a.save__record {
+    position: absolute;
+    font-weight: 700;
+    color: white;
+    margin-top: 0%;
+    margin-left: -25%;
+
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    padding: 0.8em 1em calc(0.8em + 3px);
+    border-radius: 3px;
+    background: rgb(64, 199, 129);
+    box-shadow: 0 -3px rgb(53, 167, 110) inset;
+    transition: 0.2s;
+}
+
+a.save__record:hover {
+    background: rgb(53, 167, 110);
+}
+
+a.save__record:active {
+    background: rgb(33, 147, 90);
+    box-shadow: 0 3px rgb(33, 147, 90) inset;
+}
+
+a.abolition {
+    position: absolute;
+
+    margin-left: 90px;
+    background-color: rgb(255, 21, 13);
+    box-shadow: 0 -3px rgb(170, 32, 8) inset;
+    width: 80px;
+    text-align: center;
+}
+
+a.abolition:hover {
+    background: #cd0300;
+}
+
+a.abolition:active {
+    background: #960800;
+    box-shadow: 0 3px #960800 inset;
+}
+
+#text {
+    cursor: pointer;
+}
+
+.performed {
+    text-decoration: line-through;
+}
