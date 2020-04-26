@@ -95,31 +95,6 @@ document.querySelector("#text").addEventListener("click", function (e) {
   localStorage.setItem("performed", JSON.stringify(performed));
 });
 
-// remove from list
-
-document.body.addEventListener("click", (e) => {
-  if (e.target.matches(".eraser") || e.target.matches(".remove")) {
-    text.style.cursor = " no-drop";
-
-    document
-      .querySelector("#text")
-      .addEventListener("click", function listener(e) {
-        e.target.parentNode.removeChild(e.target);
-        for (i = 0; i != data.length; i++) {
-          if (e.target.id == "id_" + data[i].id) {
-            data.splice(i, 1);
-            localStorage.setItem("items", JSON.stringify(data));
-          }
-        }
-
-        text.style.cursor = "pointer";
-        document
-          .querySelector("#text")
-          .removeEventListener("click", listener, false);
-      });
-  }
-});
-
 //rename
 
 document.querySelector("#text").addEventListener("dblclick", function (e) {
@@ -148,4 +123,29 @@ document.querySelector("#text").addEventListener("dblclick", function (e) {
       rename.value = "";
     }
   });
+});
+
+// remove from list
+
+document.body.addEventListener("click", (e) => {
+  if (e.target.matches(".eraser") || e.target.matches(".remove")) {
+    text.style.cursor = " no-drop";
+
+    document
+      .querySelector("#text")
+      .addEventListener("click", function listener(e) {
+        e.target.parentNode.removeChild(e.target);
+        for (i = 0; i != data.length; i++) {
+          if (e.target.id == "id_" + data[i].id) {
+            data.splice(i, 1);
+            localStorage.setItem("items", JSON.stringify(data));
+          }
+        }
+
+        text.style.cursor = "pointer";
+        document
+          .querySelector("#text")
+          .removeEventListener("click", listener, false);
+      });
+  }
 });
